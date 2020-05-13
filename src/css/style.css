@@ -7,6 +7,7 @@ header {
     background-color: #212121;
 
     position: fixed;
+    z-index: 10;
     width: 100%;
 }
 .menu {
@@ -138,4 +139,102 @@ header {
     font-size: 18px;
     font-weight: 400;
     text-transform: uppercase;
+}
+
+.advantages {
+    padding-top: 70px;
+    padding-bottom: 65px;
+}
+
+.advantages_header {
+    text-transform: uppercase;
+    font-size: 38px;
+    text-align: center;
+    font-weight: 400;
+    margin: 35px auto;
+}
+
+.advantages_item {
+    display: flex;
+
+    flex-flow: row nowrap;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    min-height: 200px;
+}
+
+.advantages_icon {
+    content: "";
+
+    display: block;
+    
+    flex-basis: 115px;
+    height: 115px;
+
+    margin-right: 20px;
+
+    border-radius: 58px;
+    background-color: #1eacc7;
+}
+.advantages_desc {
+    flex-basis: 80%;
+}
+
+.icon_1 {
+    background-image: url(../icons/reasons/reason_1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon_2 {
+    background-image: url(../icons/reasons/reason_2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon_3 {
+    background-image: url(../icons/reasons/reason_3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon_4 {
+    background-image: url(../icons/reasons/reason_4.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon_5 {
+    background-image: url(../icons/reasons/reason_5.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon_6 {
+    background-image: url(../icons/reasons/reason_6.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon_7 {
+    background-image: url(../icons/reasons/reason_7.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon_8 {
+    background-image: url(../icons/reasons/reason_8.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.label_btn {
+    width: 113px;
+    height: 25px;
+    padding-top: 5px;
+    display: block;
+    margin: 0 auto;
+    background-color: #000000;
+    color: #ffffff;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
 }
