@@ -1,0 +1,10 @@
+@mixin btn-hover {
+	&:hover {
+		background-image: none;
+		background-color: $bluespecial;
+	}	
+}
+@mixin reset-list {
+	list-style-type: none;
+	padding: 0;
+}
