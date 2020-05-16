@@ -25,6 +25,124 @@
 			align-items: flex-start;
 		}
 	}
+	.mobile {
+		&_item {
+			width: 300px;
+		}
+	}
+
+	.footer {
+		height: 245px;
+		padding-top: 50px;
+	
+		&_wrapper {
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: center;
+		}
+		
+	
+		&_social-icons {
+			@include reset-list;
+	
+			li {
+				display: inline-block;
+				a {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 32px;
+					height: 32px;
+					border-radius:100%;
+	
+					background-color:#000000;
+				}
+				i {
+					color: #ffffff;
+				}
+			}
+		}
+	
+		&_menu {
+			order: -1;
+			text-align: center;
+			display: flex;
+			flex-flow: column nowrap;
+			align-content: center;
+	
+	
+			&_main, &_secondary {
+				text-transform: uppercase;
+				li {
+					display: inline-block;
+				}
+			}
+	
+			&_main {
+				@include reset-list;
+				font-size: 14px;
+				margin-bottom: 7px;
+	
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: space-around;
+	
+				position: relative;
+	
+				&::before {
+					content: "";
+	
+					display: block;
+					width: 253px;
+					height: 4px;
+	
+					background-color: #1fbad6;
+	
+					position: absolute;
+					top: -23px;
+				}
+	
+				a {
+					color: #070716;
+					font-size: 15px;
+					font-weight: 500;
+				}
+			}
+			&_secondary {
+				@include reset-list;
+				margin-bottom: 10px;
+				display: block;
+				text-align: center;
+				
+				li {
+					display: inline-block;	
+					min-width: 70px;
+				}
+				
+				/* display: flex;
+				flex-flow: row nowrap;
+				justify-content: space-around; */
+	
+				a {
+					color: #999999;
+					font-size: 11px;
+				}
+			}
+			&_lang {
+				text-transform: uppercase;
+				a {
+					color: $bluespecial;
+					font-size: 11px;
+					font-weight: 600;
+				}
+			}
+		}
+	
+		&_apps {
+			text-align: right;
+		}
+	}
 }
 
 @media (max-width:991px) {
@@ -75,6 +193,31 @@
 	 .advantages_desc {
 		margin-top: 15px;
 	 }
+	 .mobile {
+		 &_item {
+			 width: 223px;
+			 height: 210px;
+			 padding-top: 50px;
+			 padding-left: 10px;
+			 padding-right: 10px;
+
+			 &_subtitle {
+				 font-size: 18px;
+			 }
+		 }
+	 }
+	 .choose {
+		 &_img {
+			 width: 700px;
+		 }
+		 &_main {
+			 height: 295px;
+		 }
+	 }
+	 .geo {
+		 height: 600px;
+	 }
+
 }
 @media (max-width:767px){
 	.menu {
@@ -86,7 +229,7 @@
 		top: 0;
 		left: -100%;
 
-		height: 100vh;
+		height: 100% ;
 		width: 50%;
 
 		z-index: 10;
@@ -111,15 +254,271 @@
 	}
 
 	.subheader {
-		&_logo {
-			img {
-				width: 100px;
-			}
+		
+
+		text-align: center;
+
+		&_phone {
+			display: block;
+			margin: 15px auto 0 auto;
+			color: #fff;
+			font-size: 16px;
+			font-weight: 400;
+			text-transform: uppercase;
+			text-align: center;
+		}
+
+		&_btn {
+			display: block;
+			width: 200px;
+			height: 40px;
+
+			margin: 10px auto  0 auto;
+
 		}
 	}
 
 	.hamburger {
 		display: block;
 		position: absolute;
+		right: 10px;
+		top: 50%;
+		transform: translateY(-50%);
+
+		width: 26px;
+		height: 12px;
+
+		span {
+			display: block;
+			height: 2px;
+			width: 100%;
+			background-color: #fff;
+			margin-bottom: 2px;
+
+			transition: 0.5s all;
+		}
+
+		&_active {
+			span {
+				margin-bottom: -2px;
+				&:nth-child(1) {
+					transform: translateY(3px) rotate(-45deg);
+				}
+				&:nth-child(2) {
+					display: none;
+				}
+				&:nth-child(3) {
+					transform: translateY(3px) rotate(45deg);
+				}
+			}
+		}
 	}
+	.xs-hidden {
+		display: none;
+	}
+
+	.xs-visible {
+		display:  block;
+	}
+
+	.promo {
+		&_header {
+			line-height: 45px;
+			font-size: 38px;
+		}
+		&_subheader {
+			font-size: 23px;
+		}
+		&_descr {
+			font-size: 16px;
+		}
+	} 
+	.sm-hidden {
+		display: none;
+	}
+
+	.choose {
+		&_img {
+			width: 500px;
+			transform: translateY(-180px);
+		}
+		&_desc {
+			transform: translateY(-180px);
+		}
+		&_main {
+			height: 250px;
+		}
+	}
+
+
 }
+@media (max-width:575px){
+	nav {
+		height: 40px;
+	}
+	.subheader {
+		height: 60px;
+		&_official {
+			display: none;
+		}
+		&_logo {
+			margin-top: 15px;
+
+			img {
+				margin-left: 15px;
+			}
+		}
+		&_phone {
+			font-size: 12px;
+			font-weight: 400;
+			margin-top: 10px;
+		}
+		&_btn {
+			width: 110px;
+			height: 22px;
+			font-size: 10px;
+			margin-top: 7px;
+		}
+	}
+	.promo {
+		min-height: 400px;
+
+		padding: 153px 0 35px 0;
+		&_header {
+			font-size: 30px;
+			line-height: 40px;
+		}
+		&_subheader {
+			font-size: 20px;
+			margin-top: 33px;
+			line-height: 30px;
+		}
+		&_descr {
+			display: none;
+		}
+		&_btn {
+			margin-top: 72px;
+		}
+	}
+	.menu {
+		width: 85%;
+		&_item {
+			text-align: center;
+		}
+		&_link {
+			font-size: 18px;
+			text-transform: uppercase;
+		}
+	}
+
+	.title {
+		font-size: 30px; 
+	}
+
+	.advantages {
+		padding: 22px 0 36px 0;
+
+		&_desc {
+			width: auto;
+		}
+		&_icon {
+			width: 100px;
+			height: 100px;
+			margin-right: 0;
+		}
+		&_subheader {
+			text-align: center;
+			font-size: 16px;
+		}
+	}
+
+	.mobile {
+		padding: 48px 0 44px 0;
+		&_item {
+			width: 290px;
+			height: 200px;
+			padding: 62px 10px 5px 10px;
+		}
+		&_item_subtitle {
+			font-size: 18px; 
+		}
+	}
+
+	.choose {
+		/* &_title, &_subtitle {
+			display: none;
+		} */
+		.title, .subtitle {
+			display: none;
+		}
+		&_header {
+			height: 390px;
+			padding-top: 25px;
+			position: relative;
+		}
+		&_main {
+			display: none;
+		}
+		&_img-min {
+			position: absolute;
+			left: 50%;
+			top: 85px;
+			transform: translateX(-50%);
+		}
+		&_desc-min {
+			width: 100%;
+			padding: 0 10px;
+			color: #fff;
+			text-align: center;
+			font-size: 17px;
+			line-height: 25px;
+			position: absolute;
+			top: 280px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	.require {
+		padding: 25px 0 24px 0;
+
+		&_block {
+			margin: 10px 0;
+		}
+		&_list {
+			margin-top: 10px;
+			padding-left: 32px;
+		}
+
+	}
+
+	.title_require {
+		margin-top: 15px;
+		font-size: 16px;
+		font-weight: 600;
+	}
+
+	.geo {
+		height: 360px;
+		padding-top: 25px;
+
+		.title {
+			font-size: 16px;
+			margin-top: 16px;
+			margin-bottom: 8px;
+		}
+		.subtitle {
+			font-size: 14px;
+		}
+
+		&_seeall {
+			bottom: 34px;
+			width: 200px;
+		}
+	}
+	.sm-hidden {
+		display: block;
+	}
+
+}
+
