@@ -247,9 +247,22 @@
 			padding-right: 0;
 			border-right: none;
 			margin: 10px 0;
+
+			width: 100%;
+			text-align: center;
 		}
 		&_link {
 			font-size: 20px;
+			display: block;
+			width: auto;
+
+			padding: 10px 0;
+
+			&:focus, &:active {
+				background-color: rgba($color: #ffffff, $alpha: .4);
+				color: #fff;
+				text-decoration: none;
+			}
 		}
 	}
 
