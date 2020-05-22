@@ -1,7 +1,12 @@
+@import "bootstrap-reboot.min";
+@import "bootstrap-grid.min";
+
+
 * {
 	font-family: 'Roboto', sans-serif;
 	box-sizing: border-box;
  }
+
 
  @import "variables";
  @import "mixins";
